@@ -1,14 +1,14 @@
 import {Book} from "../model/Book";
 
-type bookProp = {
+type BookProp = {
     book: Book
 }
 
-export default function singleBook({book} : bookProp) {
+export default function singleBook({book}: BookProp) {
 
-    return <div>
-
-        <div>{book.title} {book.isbn}</div>
-
-    </div>
+    return (
+        <div>
+            <div>{book.title} {book.isbn}</div>
+        </div>
+    )
 }

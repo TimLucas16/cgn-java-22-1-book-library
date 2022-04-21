@@ -1,0 +1,9 @@
+#header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#header > img {
+    width: auto;
+    height: 300px;
+}
