@@ -35,8 +35,8 @@ public class BookController {
         return bookService.addBook(newBook);
     }
 
-    @DeleteMapping
-    public void deleteBook(String isbn){
+    @DeleteMapping(path = "{isbn}")
+    public void deleteBook(@PathVariable String isbn){
         bookService.deleteBook(isbn);
     }
 

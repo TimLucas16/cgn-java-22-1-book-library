@@ -6,18 +6,20 @@ import BookOverview from "./component/BookOverview";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import BookGalleryPage from './pages/BookGalleryPage';
 
+
 export default function App() {
 
     const books = useBooks()
 
     return (
+        <div>
         <BrowserRouter>
             <Header />
             <Routes>
+                <Route path={"/"} element={<div >Test</div>} />
                 <Route path={"/gallery"} element={<BookGalleryPage books={books} />} />
             </Routes>
         </BrowserRouter>
+        </div>
     )
 }
-
-//<BookOverview books={books}/>

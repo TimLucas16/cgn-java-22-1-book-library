@@ -7,7 +7,7 @@ export default function useBooks() {
     const [books, setBooks] = useState<Book[]>([])
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/book`)
+        axios.get(`/book`)
             .then(response => response.data)
             .then(body => setBooks(body))
             .catch(console.error)
